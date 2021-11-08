@@ -1,0 +1,39 @@
+.image{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 100%;
+    width: 100%;
+    
+    }
+    .container{
+        width: 100px;
+        height: 600px;
+    }
+    h1{
+        color: rgb(255, 82, 39);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 800;
+        font-size: 110px;
+       
+        margin-top: 30%;
+        margin-left: 20%;
+    }
+    p{
+        color: rgb(0, 0, 63);
+        font-weight: lighter;
+        font-size: 35px;
+        margin-left: 20%;
+    }
+    .badge{
+        margin-left: 45%;
+        height: 50px;
+        top: 50%;
+    }
+    .map{
+        margin-top: 16px;
+        margin-left: 88%;
+    }
+    h3{
+        margin-top: 15px;
+    }
