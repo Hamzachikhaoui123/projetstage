@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
     font-family: 'Poppins',sans-serif;
-    background-image: linear-gradient(90deg , #9ef7a5,#9fff97);
+   
 }
+@import '~ngx-toastr/toastr';

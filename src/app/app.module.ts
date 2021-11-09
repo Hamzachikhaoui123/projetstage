@@ -8,7 +8,12 @@ import { ListeLevesComponent } from './views/users/liste-leves/liste-leves.compo
 import { SidebarComponent } from './shardes/sidebar/sidebar/sidebar.component';
 import { NavabarComponent } from './shardes/navabar/navabar/navabar.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
+import { AddElevesComponent } from './views/users/addEleves/add-eleves/add-eleves.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule, ToastNoAnimation, ToastNoAnimationModule } from 'ngx-toastr';
+import { Page404Component } from './page404/page404.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +21,18 @@ import { LoginComponent } from './login/login.component';
     ListeLevesComponent,
     SidebarComponent,
     NavabarComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    AddElevesComponent,
+    Page404Component,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastrModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
