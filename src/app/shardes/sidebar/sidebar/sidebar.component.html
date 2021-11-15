@@ -1,7 +1,7 @@
 <ul class="navbar-nav  sidebar sidebar-dark accordion h-100" style="background-color:#002b36 ;" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="./../index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" [routerLink]="['/']">
         <div class="sidebar-brand-icon ">
             <i class="fas fa-home"></i>
         </div>
@@ -24,26 +24,12 @@
     <hr class="sidebar-divider">
     <!---->
    
+    
+    
     <li class="nav-item active">
-        <a class="nav-link" href="./../views/admin/product/produits.html">
-
-            <i class="fas fa-align-center"></i>
-            <span>Gestion De Niveaux</span></a>
-    </li>
-    <li class="nav-item active">
-        <a class="nav-link"[routerLink]="['/admin/classe']">
-            <i class="fas fa-school"></i>
-            <span>Gestion Des Classes</span></a>
-    </li>
-    <li class="nav-item active">
-        <a class="nav-link" href="./admin/Order/Order_management.html">
-            <i class="fas fa-concierge-bell"></i>
-            <span>Gestion Des Services </span></a>
-    </li>
-    <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/admin/users/listeEleves']">
+        <a class="nav-link" [routerLink]="['/admin/classe/liste']">
             <i class="fas fa-user-cog"></i>
-            <span>Gestion Des Etudiants</span></a>
+            <span>Gestion Des Classes</span></a>
     </li>
     <li class="nav-item active">
         <a class="nav-link" href="./client/My-Order.html">
