@@ -1,24 +1,46 @@
-<app-navabar></app-navabar>
- <section class="container">
-     <div class="row d-flex justify-content-center algin-items-center  bg-row">
-         <div class="col-md-5 bg-box p-5 rounded shadow">
-             <h3 class="text-white">SIGN IN</h3>
-             <form >
-                 <div class="mb-3">
-                     <label for="email" class="form-label text-white">Email</label>
-                     <input type="email" name="email" class="form-control" id="email">                 
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label text-white">Password</label>
-                        <input type="password" name="password" class="form-control" id="password">                 
-                       </div>
-                       <div class="mb-3">
-                           <input type="checkbox" name="checkbox" class="form-check-input" id="checkbox">
-                           <label for="form-check-label text-white" for="check1" class="text-white">Keep me signed in</label>
-                       </div>
-                       <div class="mb-3"><button type="submit" class="btn btn-light">Log In</button></div>
-             </form>
-         </div>
+<section class="container">
+    <div class="row d-flex justify-content-center algin-items-center  bg-row">
+        <div class="col-md-5 bg-box p-5 rounded shadow">
+            <h3 class="text-white">SIGN IN</h3>
+            <form class="user" [formGroup]="loginForm">
+                <div class="mb-3">
+                    <label for="email" class="form-label text-white">Email</label>
+                    <input type="email" name="email" class="form-control" id="email" formControlName="email">
+                    <div *ngIf="email?.touched  && email?.invalid">
+                        <small *ngIf='email?.errors?.required' class="text-danger">Email is required</small>
+                        <small *ngIf='email?.errors?.email' class="text-danger"> Invalid Email</small>
 
-     </div>
- </section>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label text-white">Password</label>
+                    <input type="password" name="password" class="form-control" id="password"
+                        formControlName="password">
+                    <div *ngIf="password?.touched  && password?.invalid">
+                        <small *ngIf='password?.errors?.required' class="text-danger">Password is required</small>
+
+                        <small *ngIf='password?.errors?.minlength' class="text-danger">password must contain 6
+                            characters at least</small>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input type="checkbox" name="checkbox" class="form-check-input" id="checkbox">
+                    <label for="form-check-label text-white" for="check1" class="text-white">Keep me signed in</label>
+                </div>
+                <div class=""><button type="submit"
+                        class="btn btn-light mt-5 position-absolute top-60 start-50 translate-middle"
+                        [routerLink]="['/dashbord']">Log In</button></div>
+
+                <div class="row">
+                    <div class="col">
+                        <a [routerLink]="['/register']" class="text-white">connexion</a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="small">MotePasse Oblier</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>

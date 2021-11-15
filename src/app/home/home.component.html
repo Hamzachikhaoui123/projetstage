@@ -1,25 +1,59 @@
-<app-navabar></app-navabar>
-<div class="container-fluid mt-5 Text-centre">
+<header id="header" class="header fixed-top">
+  <div
+    class="
+      container-fluid container-xl
+      d-flex
+      align-items-center
+      justify-content-between
+    ">
+    <a class="logo d-flex align-items-center">
+      <img src="./../../assets/img/logo.png" alt="" />
+      <span>Ms-Classe</span>
+    </a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+        <li><a class="nav-link scrollto" href="#about">About</a></li>
+        <li><a class="nav-link scrollto" href="#values">Services</a></li>
+      
+        <li><a class="nav-link scrollto" href="#team">Équipe</a></li>
+        
+
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        <li>
+          <a class="getstarted scrollto" [routerLink]="['/login']">Connexion</a>
+        </li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav>
+    <!-- .navbar -->
+  </div>
+</header>
+<section id="hero" class="hero d-flex align-items-center mt-5">
+  <div class="container">
     <div class="row">
-        <div class="col-6 ">
-            <img src="./../../assets/images/img5.jpg "  class="image shadow-sm p-3 mb-5 bg-body rounded" alt="">
+      <div class="col-lg-6 d-flex flex-column justify-content-center">
+        <h1 >
+          Nous offrons des solutions modernes pour gestion de facturation
+        </h1>
+
+        <div>
+          <div class="text-center text-lg-start">
+            <a
+            
+              class="
+                btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center " >
+              <span class="text-white">pré-inscription</span>
+              <i class="bi bi-arrow-right text-white"></i>
+            </a>
+          </div>
         </div>
-        <div class="col-6 container">
-            <h1>Ms-Classe</h1>
-            <p>
-             Rendez-vous sur notre Site Ms-Classe
-            </p>
-            <button type="button" class="btn btn-primary badge">
-                Inscription Du 08 au 20 Nouvmber 2021 <span class="badge bg-secondary"></span>
-              </button>
-              <div class="row">
-                  <div class="col-3 "><button class="btn btn-primary map">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </button></div>
-                  <div class="col-9">
-                      <h3>Paris</h3>
-                  </div>
-              </div>
-        </div>
+      </div>
+      <div
+        class="col-lg-6 hero-img mt-5" >
+        <img src="./../../assets/img/hero-img.png" class="img-fluid" alt="" />
+      </div>
     </div>
-</div>
+  </div>
+</section>
