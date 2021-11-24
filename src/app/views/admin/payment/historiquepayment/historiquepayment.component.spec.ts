@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListeLevesComponent } from './liste-leves.component';
+import { HistoriquepaymentComponent } from './historiquepayment.component';
 
-describe('ListeLevesComponent', () => {
-  let component: ListeLevesComponent;
-  let fixture: ComponentFixture<ListeLevesComponent>;
+describe('HistoriquepaymentComponent', () => {
+  let component: HistoriquepaymentComponent;
+  let fixture: ComponentFixture<HistoriquepaymentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListeLevesComponent ]
+      declarations: [ HistoriquepaymentComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListeLevesComponent);
+    fixture = TestBed.createComponent(HistoriquepaymentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

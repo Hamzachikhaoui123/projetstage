@@ -1,0 +1,64 @@
+<div id="wrapper">
+    <app-sidebar></app-sidebar>
+   
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <app-navabar></app-navabar>
+            <div class="container-fluid mt-5">
+    
+                <!-- Page Heading -->
+                <div class="container-fluid ">
+                 <label for="calsse" class="mx-1 text-dark">Select le Classe: </label>
+
+                <select name="classe" id="classe">
+                  <option value="1ere">Classe 1ére</option>
+                  <option value="3eme">Classe 3éme</option>
+                  <option value="4eme">Classe 4éme</option>
+                  <option value="5eme">Classe 5éme</option>
+                  <option value="6eme">Classe 6éme</option>
+                </select>
+                </div>
+                <div class="card shadow mb-4 mt-5">
+                    <div class="card-header py-4 bg-info d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-white">Payment:</h6>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">Classe</th>
+                              <th scope="col">N.P Eleve</th>
+                              <th scope="col">Mois </th>
+                              <th scope="col">Etat Paiment </th>
+                              <th scope="col">Historique</th>
+                             
+                             
+                              
+      
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let p of listePayment ;let i = index">
+                              <th scope="row">{{p.name}}</th>
+                              <td>{{p.age}}</td>
+                  <td> </td>
+                              <td>{{p.etat}}</td>
+                              <td>
+                                <i class="fas fa-history mx-4"></i>
+                              </td>
+                           
+                          </tbody>
+                        </table>
+                        </div>
+
+                </div>
+      
+                  <!-- Pie Chart -->
+                 
+                  </div>
+        </div>
+        
+    </div>
+    
+</div>
+
