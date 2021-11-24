@@ -26,6 +26,10 @@ loginForm:FormGroup
   get email() { return this.loginForm.get('email') }
   get password() { return this.loginForm.get('password') }
   ngOnInit(): void {
+    let isLoggedIn = this.userService.isLoggedIn()
+    if(isLoggedIn){
+     this.router.navigate(['/'])
+    }
   }
   login() {
     let data = this.loginForm.value;
