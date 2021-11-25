@@ -21,6 +21,7 @@ import { Classe3emeComponent } from './views/admin/users/classe3eme/classe3eme.c
 import { Classe4emeComponent } from './views/admin/users/classe4eme/classe4eme.component';
 import { Classe5emeComponent } from './views/admin/users/classe5eme/classe5eme.component';
 import { Classe6emeComponent } from './views/admin/users/classe6eme/classe6eme.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
@@ -132,6 +133,7 @@ const routes: Routes = [
      ]
    }
    ],
+   canActivateChild:[AuthGuard]
    
  },
  {
